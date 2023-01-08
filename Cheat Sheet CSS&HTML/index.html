@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selector&Specifity</title>
+        <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+        <header>
+                <nav>
+                        <ul>
+                                <li><a href="#selector">CSS Selectors</a></li>
+                                <li><a href="#specifity">CSS Specifity</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <div>
+                        <h3 id="selector">Simple CSS selectors:</h3>
+                </div>
+                <table>
+                        <tr>
+                                <th>Based on</th>
+                                <th>Example</th>
+                                <th>Defintion</th>
+                        </tr>
+                        <tr>
+                                <td>element selector</td>
+                                <td>p {
+                                        text-align: center;
+                                        color: red;
+                                      }</td>
+                                <td>The element selector selects HTML elements based on the element name.</td>
+                        </tr>
+                        <tr>
+                                <td>id selector</td>
+                                <td>#para1 {
+                                        text-align: center;
+                                        color: red;
+                                      }</td>
+                                <td>
+                                        <ul>
+                                                <li>The id selector uses the id attribute of an HTML element to select a specific element.</li>
+                                                <li>The id of an element is unique within a page, so the id selector is used to select one unique element!</li>
+                                                <li>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</li>
+                                        </ul>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td rowspan="3">class selector</td>
+                                <td>.center {
+                                        text-align: center;
+                                        color: red;
+                                      }</td>
+                                <td>
+                                        <ul>
+                                                <li>The class selector selects HTML elements with a specific class attribute.</li>
+                                                <li>To select elements with a specific class, write a period (.) character, followed by the class name.</li>
+                                        </ul>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>p.center {
+                                        text-align: center;
+                                        color: red;
+                                      }</td>
+                                <td>You can also specify that only specific HTML elements should be affected by a class.</td>
+                        </tr>
+                        <tr>
+                                <td>&lt;p class="center large"&gt;This paragraph refers to two classes.&lt;/p&gt;</td>
+                                <td>HTML elements can also refer to more than one class.</td>
+                                
+                        </tr>
+                        <tr>
+                                <td>universal selector</td>
+                                <td>* {
+                                        text-align: center;
+                                        color: blue;
+                                      }</td>
+                                <td>The universal selector (*) selects all HTML elements on the page.</td>
+                        </tr>
+                        <tr>
+                                <td>grouping selector</td>
+                                <td>h1, h2, p {
+                                        text-align: center;
+                                        color: red;
+                                      }</td>
+                                <td>
+                                        <ul>
+                                                <li>The grouping selector selects all the HTML elements with the same style definitions.</li>
+                                                <li>To group selectors, separate each selector with a comma.</li>
+                                        </ul>
+                                </td>
+                        </tr>
+                </table><hr>
+
+                <div>
+                        <h3 id="specifity">CSS Specifity</h3>
+                        <h4>What is CSS Specifity?</h4>
+                                <p>If there are two or more CSS rules that point to the same element, the selector with the highest specificity 
+                                        value will "win", and its style declaration will be applied to that HTML element.</p>
+                                <p>Think of specificity as a score/rank that determines which style declaration is ultimately applied to an element.</p>
+
+                        <h4>Specificity Hierarchy:</h4>
+                                        <p>There are four categories which define the specificity level of a selector:</p>
+                                        <ol>
+                                                <li>Inline styles - Example: &lt;h1 style="color: pink;"&gt;</li>
+                                                <li>IDs - Example: #navbar</li>
+                                                <li>Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]</li>
+                                                <li>Elements and pseudo-elements - Example: h1, :before</li>
+                                        </ol>
+                        <h4>How to Calculate Specificity?</h4>
+                                        <p>Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute
+                                                 selector), add 1 for each element selector or pseudo-element.</p>
+                                        <p>The table below shows some examples on how to calculate specificity values:</p>
+                                        <table>
+                                                <tr>
+                                                        <th>Selector</th>
+                                                        <th>Specifity Value</th>
+                                                        <th>Calculation</th>
+                                                </tr>
+                                                <tr>
+                                                        <td>p</td>
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>p.test</p></td>
+                                                        <td>11</td>
+                                                        <td>1 + 10</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>p#demo</td>
+                                                        <td>101</td>
+                                                        <td>100 + 1</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>&lt;p style="color: pink;"&gt;</td>
+                                                        <td>1000</td>
+                                                        <td>1000</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>#demo</td>
+                                                        <td>100</td>
+                                                        <td>100</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>.test</td>
+                                                        <td>10</td>
+                                                        <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>p.test1.test2</td>
+                                                        <td>21</td>
+                                                        <td>10 + 10 + 1</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>#navbar p#demo</td>
+                                                        <td>201</td>
+                                                        <td>100 + 1 + 100</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>*</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                </tr>
+                                        </table>
+                </div>
+                
+        </main>
+        <footer>
+                <div>Reference from <a href= "https://www.w3schools.com/" target= "_blank">w3schools</a></div>
+                <div>by Nikolaus Albert</div>
+        </footer>
+</body>
+</html>

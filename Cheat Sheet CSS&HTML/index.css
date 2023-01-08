@@ -1,0 +1,48 @@
+html {
+        background-color: aliceblue;
+        color: black;
+}
+
+header {
+        background-color: rgba(100, 100, 255, 0.5 );
+        text-align: center;
+        padding: 2px 0;
+        position: sticky;
+        top: 0;
+}
+
+nav li {
+        display: inline-block; 
+        padding: 0 10px;
+        font-family: 'Garamont', serif;
+        
+}
+
+table {
+        border: 1px solid white;
+        margin: 0 auto;
+        text-align: center;
+        margin: 10px auto;
+        font-family: 'Book Antiqua', serif
+}
+
+td, th {
+        border: 3px solid black;
+        padding: 10px 10px;
+        
+}
+
+th {
+        background-color:beige
+}
+
+p {
+        font-family:'Courier New', Courier, monospace;
+}
+
+footer {
+        line-height: 1.5;
+        font-size: small;
+        text-align: center;
+        background-color:blanchedalmond
+}
