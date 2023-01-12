@@ -1,0 +1,160 @@
+body {
+        font-family: Helvetica;
+        font-size: 22px;
+        color: seashell;
+        background-color: black;
+        opacity: 0.9;
+        width: 1240px;
+        margin: 0 auto;
+}
+
+nav {
+        margin: 0 auto;
+        background-color: black;
+        opacity: 0.5;
+        border-bottom: 1px solid seashell;
+        position:fixed;
+        display: flex;
+        justify-content: space-between;
+        width: 1240px;
+        height: 69px;
+}
+
+#empty {
+        height: 69px;
+}
+
+#logo {
+        height: 50px;
+        padding: 10px 10px;
+}
+
+#info {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+
+}
+
+.info_button:hover {
+        color: LIGHTblue;
+}
+
+.info_button:active {
+        box-shadow: 10px 5px 50px yellow;
+        background-color: yellow;
+        font-size: larger;
+        border-radius: 50%;
+}
+
+a {
+        padding: 12px;
+        color: seashell;  
+        cursor: pointer;
+}
+
+#img1 {
+        background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");
+        height: 700px;
+        width: 1200px;
+        margin: 0 20px 50px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+#description_img1 {
+        background-color: black;
+        opacity: 0.9;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 1200px;
+}
+
+h4 {
+        margin: 5px auto;  
+} 
+
+h2 {
+        margin: 5px auto;
+}
+
+#tea-topic {
+        width: 1000px;
+        text-align: center;
+        margin: 50px auto;
+}
+
+#tea-topic h2, h4 {
+        margin: 20px auto;
+}
+
+#tea-variety {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+}
+
+.tea {
+        height: 200px;
+        width: 300px;
+}
+
+p {
+        margin: 10px auto;
+}
+
+#container-location {
+        background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+        width: 1200px;
+        height: 500px;
+        margin: auto 20px 20px 20px;
+}
+
+#container-location h2 {
+        padding-top: 60px;
+        padding-bottom: 15px;
+        text-align: center;
+        margin-bottom: 0;
+}
+
+#locations {
+        display: flex;
+        text-align: center;
+        line-height: 40px ;
+        justify-content: center;
+}
+
+.city {
+        background-color: black;
+        width: 300px;
+        margin: auto 20px auto 20px;
+        border-radius: 40%;
+        box-shadow: 5px 10px 20px 30px greenyellow
+}
+
+#contact {
+        text-align: center;
+        height: 200px;
+}
+
+#contact h2 {
+        padding-bottom: 20px ;
+}
+
+#copyright {
+        margin-left: 20px;
+        text-align: left;
+        font-size: 20px
+}
+
+footer {
+        text-align: center;
+        font-size: 20px;
+}
+
+footer, #copyright{
+        display: flex;
+        text-align:left;
+}
