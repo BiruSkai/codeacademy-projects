@@ -1,0 +1,199 @@
+html {
+        font-size:16px;
+        font-family: "Lora",serif;
+        letter-spacing: 0.7px;
+}
+
+body {
+        margin: 0;
+}
+
+/*Header Section*/
+@media only screen and (max-width: 540px) {
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+        }
+
+        #desktop {
+                display:none;
+        }
+
+}
+
+@media only screen and (min-width: 541px) {
+        #mobile {
+                display: none;
+        }
+}
+
+header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        position: sticky;
+        background-color:black;
+        position: fixed;
+        z-index: 1;
+        opacity: 0.7;
+}
+
+header nav img {
+        height: 50px;
+}
+
+header nav div {
+        display: flex;
+}
+
+header h1 {
+        margin-left: 0.625rem;
+        color:white;
+}
+
+header img {
+        margin-top: 0.625rem;
+}
+
+nav li {
+        display: inline;
+        margin: 0 0.625rem;
+        color:white;
+        text-decoration: none;
+}
+
+.info a, nav a {
+        color: white;
+        text-decoration: none;
+}
+.info a:hover, nav a:hover {
+        cursor: pointer;
+        color: #00cc00;
+        font-size:larger;
+        font-weight:bolder;
+        text-decoration: underline;
+}
+
+
+
+/*Main Section */
+#container1 {
+        background-image: url("./images/green1.jpg");
+        opacity: 0.7;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        height: 18.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+#mission {
+        background-color: rgba(0, 177, 200, 0.7);
+        text-align: center;
+        width: 100%;
+}
+
+#pre-container2 {
+        background-color:lightgoldenrodyellow;
+        top: 10rem;
+}
+
+#container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        align-content: space-around;
+        font-size: 0.8rem;
+}
+
+#product {
+        text-align: center;
+        margin:0;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+}
+
+.item {
+        margin: 1rem 1rem;
+}
+
+.item img {
+        width: 18.75rem;
+        height:10.5rem;
+        border-radius: 10%;
+        transition:  box-shadow 0.8s, width 0.8s, height 0.8s, transform 0.8s;
+}
+
+.item img:hover {
+        box-shadow: 10px 10px 10px lightgrey;
+        height: 14rem;
+        width: 22rem;
+}
+
+.item p {
+        width: 18.75rem;
+        text-align: justify;
+}
+
+.team {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: center;
+        background-image: url("./images/arch.jpg");
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        min-height: 31.25rem;
+}
+
+#text-team {
+        text-align: center;
+        margin: 0 10px;
+        min-height: 70px;
+}
+
+.team h2 {
+        margin: 10px 10px;
+        text-align: center;
+}
+
+.team img {
+        width: 18.725rem;
+        height: 13rem ;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0 10px;
+}
+
+.person {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+}
+
+footer {
+        background-image: url("./images/snow.jpg");
+        color: white;
+        line-height: 1.5;
+        text-align: center;
+        padding-bottom: 5px;
+        margin: 0;
+        background-position: center;
+}
+
+footer h1 {
+        margin-top: 0;
+        padding-top: 5px;
+}
